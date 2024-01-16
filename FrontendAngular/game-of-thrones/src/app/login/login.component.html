@@ -1,0 +1,30 @@
+<div class="login-container">
+    <div class="form-conteiner">
+        <h1>LOGIN</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off" class="form-style" >    
+        <mat-form-field appearance="outline" class="custom-mat-form-field">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" type="email" required>
+            <mat-error *ngIf="loginForm.get('email')?.errors?.['required']">
+            Email is required
+            </mat-error>
+            <mat-error *ngIf="loginForm.get('email')?.errors?.['email']">
+            Enter a valid email
+            </mat-error>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline" class="custom-mat-form-field">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" type="password" required>
+            <mat-error *ngIf="loginForm.get('password')?.errors?.['required']">
+            Password is required
+            </mat-error>
+        </mat-form-field>
+    
+        <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">
+            Log in
+        </button>
+        </form>
+    </div>
+  </div>
+  

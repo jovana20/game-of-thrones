@@ -1,0 +1,14 @@
+<div class="medieval-page">
+    <h1>Favorites</h1>
+    <ul class="book-list">
+      <li *ngFor="let book of favoriteBooks" class="book-item">
+        <div class="book-content">
+        <h2>{{ book.name }}</h2>
+        <p>{{ book.author}}</p>
+        </div>
+        <button (click)="removeFromFavorites(book)" class="favorite-btn">
+          <i class="fas fa-heart"></i> <!-- Using FontAwesome's heart icon -->
+        </button>
+      </li>
+    </ul>
+</div>

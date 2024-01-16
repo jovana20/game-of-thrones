@@ -1,0 +1,71 @@
+.medieval-page {
+   // background: url('../../assets/images/game-of-thrones.png');
+    font-family: 'Uncial Antiqua', sans-serif;
+    padding: 20px;
+    color: #5d4e4f;
+  }
+  
+  .medieval-page h1 {
+    text-align: center;
+    color: white;
+  }
+  
+  .book-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .book-item {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .book-content {
+    flex-grow: 1;
+    /* rest of your styles if needed... */
+  }
+  .book-cover {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .actions button {
+    background-color: #7a5734;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .actions button:hover {
+    background-color: #5d4e4f;
+  }
+  
+  /* Add any additional styling as needed for your app */
+  /* ... other styles ... */
+
+.favorite-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .favorite-btn i {
+    color: red;
+    font-size: 24px; /* Adjust size as needed */
+  }
+  
+  .favorite-btn i:hover {
+    color: #fff;
+    text-shadow: 0 0 10px gray; /* A glow effect for hover state */
+  }
+  

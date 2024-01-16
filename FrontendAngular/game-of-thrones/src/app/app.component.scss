@@ -1,0 +1,13 @@
+.component-conteiner {
+    height: 100%;
+    padding-top: 20px;
+    background: url('../assets/images/game-of-thrones.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Keeps the background image fixed during scrolling */
+    background-size: cover; 
+    overflow:scroll;
+}
+
+
+
+
