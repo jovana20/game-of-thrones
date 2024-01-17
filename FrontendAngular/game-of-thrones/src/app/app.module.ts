@@ -46,6 +46,11 @@ import {favoritesReducer } from './store/reducers/book.reducer';
 
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

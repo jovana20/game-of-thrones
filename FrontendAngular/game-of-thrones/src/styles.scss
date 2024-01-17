@@ -15,10 +15,10 @@ $custom-typography: mat-typography-config(
 
 :root {
 
-    --mdc-outlined-text-field-caret-color: #D1B000;
-    --mdc-outlined-text-field-focus-outline-color: #D1B000;
-    --mdc-outlined-text-field-focus-label-text-color: #D1B000;
-    --mdc-protected-button-container-color: #D1B000;
+    --mdc-outlined-text-field-caret-color: #2c2cd2;
+    --mdc-outlined-text-field-focus-outline-color: #2c2cd2;
+    --mdc-outlined-text-field-focus-label-text-color: #2c2cd2;
+    --mdc-protected-button-container-color: #2c2cd2;
 }
 
 .custom-mat-form-field {
@@ -38,20 +38,20 @@ $custom-typography: mat-typography-config(
     }
   
     &.mat-focused .mat-form-field-outline-thick {
-      border-color: #ad9312; 
+      border-color: #2c2cd2; 
     }
 
  
   }
 
   ::ng-deep.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    border: 1px solid goldenrod !important; 
+    border: 1px solid #2c2cd2 !important; 
   }
   
 
 
   .mat-mdc-raised-button.mat-primary { 
-    --mdc-protected-button-container-color: #D1B000;
+    --mdc-protected-button-container-color: #2c2cd2;
 
   }
 

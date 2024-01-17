@@ -5,7 +5,6 @@ import { selectFavorites } from '../store/selector/selector';
 import { Store } from '@ngrx/store';
 import { FavoriteBook } from '../store/models/FavoriteBook.model';
 import { State } from '../store/models/state.model';
-import * as FavoritesActions from '../store/actions/books.actions'
 
 
 

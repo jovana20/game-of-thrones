@@ -70,13 +70,4 @@ export class HomepageComponent implements OnInit  {
    this.router.navigate(['/books', book.name], navigationExtras);
   }
 
-
-  // isInFavorites(url: string) {
-  //   let isFavorite = false;
-  //   this.store.select(selectFavorites).subscribe(favorites => {
-  //     isFavorite = favorites.some(item => item.id === url);
-  //   });
-
-  //   return isFavorite;
-  // }
 }
