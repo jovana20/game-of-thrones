@@ -1,1 +1,42 @@
-README file
+# Game of Thrones Books - Full Stack Application
+
+This project is a full stack application for a Game of Thrones book collection, consisting of a Node.js backend and an Angular frontend.
+
+## Backend Setup
+
+### Prerequisites
+- **MongoDB**: Ensure MongoDB is installed on your system. If it's not installed, you might encounter issues with connecting to the database.
+
+### Getting Started
+1. Navigate to the `BackendNode` directory.
+2. Install dependencies:npm install
+3. Start the application:node app.js
+
+
+## Frontend Setup
+
+### Prerequisites
+- **Node.js**: Ensure you have Node.js installed to use npm commands.
+
+### Getting Started
+1. Navigate to the `FrontendAngular/game-of-thrones` directory.
+2. Install dependencies:npm install
+3. Start the application: npm run start
+
+
+## Running Tests
+
+### Cypress Tests
+- To run Cypress e2e tests, make sure the backend is running.
+- Use the following command to open Cypress: npx cypress open
+
+- After opening Cypress, you will see the configured e2e tests. Note that if tests are failing, you may need to try running them 2-3 times, as sometimes responses are not received in time due to Cypress's fast execution.
+- **Important**: For Cypress tests, use the credentials `jovana@example.com` and `12345` for authorization.
+
+### Karma and Jasmine Tests
+- To run Karma and Jasmine tests: npm run test
+
+
+## Additional Information
+
+For more details or if you encounter any issues, please feel free to contact me.
