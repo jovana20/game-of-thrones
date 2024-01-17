@@ -2,7 +2,7 @@
     max-width: 100%;
     height: 100%;   
    // background-image: url("../../assets/images/game-of-thrones.png");
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
     display: flex;
@@ -14,12 +14,13 @@
     @media (min-width: 768px) {
      // max-width: 400px;
 
+
     }
 
     .form-conteiner {
         display: flex;
         flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.7); /* Set the background color with opacity */
+        background-color: rgba(255, 255, 255, 0.9); 
         border-radius: 8px;
         padding: 20px;
 
@@ -28,12 +29,23 @@
             display: flex;
             flex-direction: column;
         }
-
         @media (min-width: 768px) {
             width: 400px;
             height: 400px;
             
         }
+    }
+  }
+
+
+  a {
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 15px;
+
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
     }
   }
   

@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit{
 
   loginForm: FormGroup = new FormGroup({});
+  isLoggin: boolean = true;
 
   constructor(private fb: FormBuilder, private authService: AuthServiceService, private router: Router) {}
 
@@ -22,11 +23,23 @@ export class LoginComponent implements OnInit{
     });
   }
 
+
+  changeSignIn() {
+    this.isLoggin = !this.isLoggin;
+  }
+
   onSubmit() {
     if (this.loginForm.valid) {
-      this.authService.login({username: this.loginForm.value.email, password: this.loginForm.value.password})
-      this.router.navigate(['books'])
-      // Handle login logic here
+
+      this.authService.login({username: this.loginForm.value.email, password: this.loginForm.value.password}, this.isLoggin).subscribe(
+        (res: any) => {
+          localStorage.setItem('token', res.token);
+          this.router.navigate(['/books']); 
+        },
+        (error) => {
+          console.error('Login failed', error);
+        }
+      );
     }
   }
 }

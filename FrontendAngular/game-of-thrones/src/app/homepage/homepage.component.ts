@@ -24,7 +24,7 @@ export class HomepageComponent implements OnInit  {
 
   searchControl = new FormControl('')
 
-  constructor(private gotBooksService: IceAndFireService, private router: Router, private store: Store<State>) { }
+  constructor(public gotBooksService: IceAndFireService, private router: Router, private store: Store<State>) { }
 
   ngOnInit() {
     this.gotBooksService.getBooks().subscribe((data: any) => {
@@ -42,7 +42,6 @@ export class HomepageComponent implements OnInit  {
   }
 
   applyFilter(searchTerm: any) {
-    // Implement your filtering logic here
     this.books = this.originalBooks.filter(book =>
       book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       book.authors.some((author: any) => author.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -50,7 +49,7 @@ export class HomepageComponent implements OnInit  {
   }
 
 
-  manageFavorites(event: Event, book: any) {
+  onManageFavorites(event: Event, book: any) {
     event.stopPropagation();
     const favoriteBook: FavoriteBook = {
       id: book.url,
@@ -58,13 +57,7 @@ export class HomepageComponent implements OnInit  {
       author: book.authors.join(', ')
     }
 
-    if(this.isInFavorites(book.url)) {
-      this.store.dispatch(FavoritesActions.removeFromFavorites({ favoriteBook }));
-
-    } else {
-      this.store.dispatch(FavoritesActions.addToFavorites({favoriteBook}));
-
-    }
+    this.gotBooksService.manageFavorites(favoriteBook);
   }
 
  
@@ -78,12 +71,12 @@ export class HomepageComponent implements OnInit  {
   }
 
 
-  isInFavorites(url: string) {
-    let isFavorite = false;
-    this.store.select(selectFavorites).subscribe(favorites => {
-      isFavorite = favorites.some(item => item.id === url);
-    });
+  // isInFavorites(url: string) {
+  //   let isFavorite = false;
+  //   this.store.select(selectFavorites).subscribe(favorites => {
+  //     isFavorite = favorites.some(item => item.id === url);
+  //   });
 
-    return isFavorite;
-  }
+  //   return isFavorite;
+  // }
 }

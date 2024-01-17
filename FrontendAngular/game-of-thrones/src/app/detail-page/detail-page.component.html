@@ -1,6 +1,11 @@
 <div *ngIf="bookCharacterDetails?.book">
     <div class="book-detail-conteiner">
+    <div class="header-conteiner">
     <h1>{{bookCharacterDetails.book.name}}</h1>
+    <button class="btn" class="favorite-btn"  (click)="onManageFavorites($event, bookCharacterDetails.book)" [ngClass]="{'is-favorite': booksService.isInFavorites(bookCharacterDetails.book.url)}" >
+        <i class="fas fa-heart"></i> 
+    </button>
+    </div>
     <p class="author">Author: {{ bookCharacterDetails.book.authors.join(', ') }}</p>
     <p>Pages: {{ bookCharacterDetails.book.numberOfPages }}</p>
     <p>Publisher: {{ bookCharacterDetails.book.publisher }}</p>

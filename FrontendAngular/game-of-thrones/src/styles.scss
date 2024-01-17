@@ -23,23 +23,22 @@ $custom-typography: mat-typography-config(
 
 .custom-mat-form-field {
     .mat-form-field-outline {
-      border-radius: 10px; // Adjust the border-radius as needed
+      border-radius: 10px;
     }
   
     .mat-form-field-label {
-      color: grey; // Change label color if needed
+      color: grey; 
     }
   
     .mat-form-field-infix {
-      border-radius: 10px; // Adjust for inner input field
+      border-radius: 10px; 
       input {
-        border-radius: 10px; // Border-radius for the input element
+        border-radius: 10px; 
       }
     }
   
-    // Adjust styles for focused state
     &.mat-focused .mat-form-field-outline-thick {
-      border-color: #ad9312; // Example color when the field is focused
+      border-color: #ad9312; 
     }
 
  
@@ -60,3 +59,27 @@ $custom-typography: mat-typography-config(
     background-color: white;
   }
   
+  .favorite-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fabebe;
+    font-size: 20px;
+
+
+
+
+    &.is-favorite {
+      color: red;
+
+      :hover {
+        color: #fff;
+        text-shadow: 0 0 10px gray; 
+      }
+    }
+
+    :hover {
+      color: red;
+      text-shadow: 0 0 10px gray;
+    }
+  }

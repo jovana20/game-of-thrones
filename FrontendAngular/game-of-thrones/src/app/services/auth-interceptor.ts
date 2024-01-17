@@ -6,8 +6,7 @@ import { Observable } from 'rxjs';
 export class AuthInterceptor implements HttpInterceptor {
 
   private isAuthRequired(url: string): boolean {
-    // Define logic to determine if auth is required for the given URL
-    return url.startsWith('http://jovana');
+    return url.startsWith('http://localhost:3000');
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

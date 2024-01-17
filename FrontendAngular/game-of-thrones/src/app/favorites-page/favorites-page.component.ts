@@ -35,7 +35,7 @@ export class FavoritesPageComponent implements OnInit{
         name: book.name,
         author: book.author
       }
-      this.store.dispatch(FavoritesActions.removeFromFavorites({ favoriteBook }));
+      this.gotBooksService.manageFavorites(favoriteBook)
     }
   
 }

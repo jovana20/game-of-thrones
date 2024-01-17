@@ -11,8 +11,7 @@ export class NavbarComponent {
   constructor(private router: Router) {}
 
   logout() {
-    // Clear authentication token, user data, etc.
-    // Redirect to login
+    localStorage.clear();
     this.router.navigate(['/login']);
   }
 }

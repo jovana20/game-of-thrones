@@ -1,12 +1,14 @@
 <div class="container">
     <header class="header">
-      <h1>Game of Thrones Books</h1>
+      <h1 class="title">Game of Thrones Books</h1>
     </header>
+<div class="search-input-wrapper">
 
-    <mat-form-field appearance="outline" class="custom-mat-form-field" style="width: 100%;">
+    <mat-form-field appearance="outline" class="custom-mat-form-field search-field">
         <mat-label>Search Books</mat-label>
-        <input matInput [formControl]="searchControl">
-      </mat-form-field>
+        <input matInput [formControl]="searchControl" class="input">
+    </mat-form-field>
+</div>
   
     <ul class="book-list">
       <li class="book-item" *ngFor="let book of books" (click)="goToDetailsPage(book)">
@@ -18,8 +20,8 @@
           <p>Released: {{ book.released | date }}</p>
         </div>
         <div >
-              <button class="btn" (click)="manageFavorites($event, book)" class="favorite-btn"  [ngClass]="{'is-favorite': isInFavorites(book.url)}" >
-                <i class="fas fa-heart"></i> <!-- Using FontAwesome's heart icon -->
+              <button class="btn" (click)="onManageFavorites($event, book)" class="favorite-btn"  [ngClass]="{'is-favorite': gotBooksService.isInFavorites(book.url)}" >
+                <i class="fas fa-heart"></i> 
             </button>
         </div>
       </li>

@@ -9,6 +9,14 @@
     margin-bottom: 20px;
     color: white;
   }
+  .title{
+    font-size: 3rem;line-height:40px;
+    padding: 2rem 0;
+  }
+
+  .search-field{
+    width: 100%;
+  }
   
   .book-list {
     list-style: none;
@@ -19,7 +27,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 15px;
@@ -45,15 +53,15 @@
     padding: 5px;
     cursor: pointer;
     transition: color 0.3s;
-    color: #D1B000; /* Icon color */
+    color: #D1B000; 
   }
   
   .btn:hover {
-    color: #e9cf3c; /* Darker shade on hover */
+    color: #e9cf3c; 
   }
   
   .fas {
-    font-size: 1.5em; /* Icon size */
+    font-size: 1.5em; 
   }
 
   
@@ -62,7 +70,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #fff;
+    color: #fabebe;
     font-size: 20px;
 
 
@@ -73,7 +81,7 @@
 
       :hover {
         color: #fff;
-        text-shadow: 0 0 10px gray; /* A glow effect for hover state */
+        text-shadow: 0 0 10px gray; 
       }
     }
 
@@ -83,4 +91,30 @@
     }
   }
   
+  @media screen and (min-width: 801px) {
+    .container{
+      width: 90%;
+      margin: 0 auto;
+      max-width: unset;
+    }
+    .title{
+      font-size: 4rem;
+    }
+
+    .search-field{
+      width: 40%;
+    }
+    .search-input-wrapper{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  .book-list{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+  }
+
+  }
   

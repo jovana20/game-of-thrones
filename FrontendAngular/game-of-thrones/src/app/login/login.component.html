@@ -1,6 +1,6 @@
 <div class="login-container">
     <div class="form-conteiner">
-        <h1>LOGIN</h1>
+        <h1 >{{isLoggin ? 'Log in' : 'Sign in'}}</h1>
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off" class="form-style" >    
         <mat-form-field appearance="outline" class="custom-mat-form-field">
             <mat-label>Email</mat-label>
@@ -19,10 +19,17 @@
             <mat-error *ngIf="loginForm.get('password')?.errors?.['required']">
             Password is required
             </mat-error>
+
+            
         </mat-form-field>
+
+        <a (click)="changeSignIn()">
+            {{ isLoggin ? "Don't have an account? Sign in." : "Log in" }}
+          </a>
+
     
         <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">
-            Log in
+            {{isLoggin ? 'Log in' : 'Sign in'}}
         </button>
         </form>
     </div>

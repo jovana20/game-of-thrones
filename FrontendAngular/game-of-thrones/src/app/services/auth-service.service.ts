@@ -6,21 +6,23 @@ import { tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class AuthServiceService {
-  private authUrl = 'http://localhost:3000'; // Replace with your actual backend URL
+  private authUrl = 'http://localhost:3000'; 
 
   constructor(private http: HttpClient) { }
 
-  signIn(userData: { email: string, password: string }) {
-    return this.http.post(`${this.authUrl}/signin`, userData);
+  signIn(body: { email: string, password: string }) {
   }
 
-  login( body: { username: string, password: string }) {
-    return this.http.post(`${this.authUrl}/signup`, body)
-      .subscribe((res: any) => {
-          localStorage.setItem('token', res.token);
-        })
-      ;
+  login( body: { username: string, password: string }, isLoggin = true) {
+
+    if(isLoggin) {
+      return this.http.post(`${this.authUrl}/login`, body);
+
+    } else {
+      return this.http.post(`${this.authUrl}/signup`, body);
+
+    }
+
   }
-  
-  // ... other methods
+
 }

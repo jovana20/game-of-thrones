@@ -19,7 +19,7 @@
     display: flex;
   justify-content: space-between;
   align-items: center;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     margin-bottom: 10px;
     padding: 15px;
     border-radius: 5px;
@@ -27,7 +27,7 @@
   
   .book-content {
     flex-grow: 1;
-    /* rest of your styles if needed... */
+    
   }
   .book-cover {
     width: 100%;
@@ -50,8 +50,6 @@
     background-color: #5d4e4f;
   }
   
-  /* Add any additional styling as needed for your app */
-  /* ... other styles ... */
 
 .favorite-btn {
     background: none;
@@ -61,11 +59,11 @@
   
   .favorite-btn i {
     color: red;
-    font-size: 24px; /* Adjust size as needed */
+    font-size: 24px;
   }
   
   .favorite-btn i:hover {
     color: #fff;
-    text-shadow: 0 0 10px gray; /* A glow effect for hover state */
+    text-shadow: 0 0 10px gray; 
   }
   
